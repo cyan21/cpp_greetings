@@ -2,11 +2,10 @@
 
 //namespace LanguageLib 
 //{
-    class Greetings 
-    {
-        public:
-            Greetings();
-            void fr();
-            void en();
-    };
+class Greetings 
+{
+        Greetings();
+        void fr();
+        void en();
+};
 //}
