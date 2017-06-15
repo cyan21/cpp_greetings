@@ -35,4 +35,4 @@ conan_basic_setup()''')
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["cpp_greetings"]
+        self.cpp_info.libs = ["greet"]
