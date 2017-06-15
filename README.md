@@ -33,7 +33,7 @@ cd Release
 > exemple with Visual Studio Code
 
 1. in VS Code, open the folder containing the source code
-2. Press **Ctrl+Shift+B**, this will generate **.vscode/tasks.json**
+2. Press **Ctrl+Shift+B** and select **Others**, this will generate **.vscode/tasks.json**
 3. Copy paste this snippet in **.vscode/tasks.json**
 ```
 {
@@ -45,6 +45,6 @@ cd Release
 ```
 
 4. Press **Ctrl+Shift+B** to compile
-5. Execute the exe file
+5. Execute grettings.exe
 
 
