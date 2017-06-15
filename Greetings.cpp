@@ -18,14 +18,5 @@ using namespace std;
     {
         cout << "Hello !" << endl;
     }
-/*
-    void main() 
-    {
-        cout << "test" << endl;
-        
-	    Greetings greet;
-	    greet.fr();
-	    greet.en();
-    }
-*/
+
 //}
