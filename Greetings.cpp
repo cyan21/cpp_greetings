@@ -3,8 +3,10 @@
 
 using namespace std;
 
-//namespace LanguageLib 
-//{
+/*
+ * 
+ * namespace LanguageLib 
+{
     Greetings::Greetings()
     {
     }
@@ -19,4 +21,10 @@ using namespace std;
         cout << "Hello !" << endl;
     }
 
-//}
+}
+*/
+
+void en() 
+{
+	cout << "Hello !" << endl;
+}

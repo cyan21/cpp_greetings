@@ -1,7 +1,8 @@
 #pragma once
 
-//namespace LanguageLib 
-//{
+/*
+ * namespace LanguageLib 
+{
     class Greetings 
     {
         public:
@@ -9,4 +10,6 @@
             void fr();
             void en();
     };
-//}
+}
+*/
+void en();
