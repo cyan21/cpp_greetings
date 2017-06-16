@@ -6,4 +6,10 @@
   #define GREETINGS_EXPORT
 #endif
 
-GREETINGS_EXPORT void en();
+class GREETINGS_EXPORT Greetings
+{
+	public:
+            Greetings();
+            void fr();
+            void en();
+};

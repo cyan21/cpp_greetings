@@ -2,6 +2,7 @@
 
 int main (void){
 
-    en();
-
+	Greetings g;
+	g.en();
+	g.fr();
 }

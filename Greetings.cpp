@@ -3,7 +3,12 @@
 
 using namespace std;
 
-void en() 
+void Greetings::en() 
 {
 	cout << "Hello !" << endl;
+}
+
+void Greetings::fr() 
+{
+	cout << "Bonjour !" << endl;
 }
