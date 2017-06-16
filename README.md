@@ -56,8 +56,8 @@ cd Release
 1. Fetch the conanfile.py from the repository
 
 ```
-git clone https://github.com/cyan21/cpp_greetings.git && git checkout conan_deps
-cd cpp_greetings
+git clone https://github.com/cyan21/cpp_greetings.git 
+cd cpp_greetings && git checkout conan_deps
 ```
 
 2. Generate the files for your package and for your test, it will create the following files in the *test_package* :
