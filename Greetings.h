@@ -1,12 +1,12 @@
 #pragma once
 
-#ifdef WIN32
-  #define GREETINGS_EXPORT __declspec(dllexport)
-#else
-  #define GREETINGS_EXPORT
-#endif
+#if defined(GREETINGS_EXPORT) 
+#   define  GREETINGS  __declspec(dllexport)
+#else // outside DLL
+#   define GREETINGS  __declspec(dllimport)
+#endif  // XYZLIBRARY_EXPORT
 
-class GREETINGS_EXPORT Greetings
+class GREETINGS Greetings
 {
 	public:
             Greetings();
