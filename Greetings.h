@@ -5,7 +5,7 @@
 {
     class Greetings 
     {
-        public:
+//        public:
             Greetings();
             void fr();
             void en();
