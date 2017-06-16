@@ -13,6 +13,3 @@ ADD_LIBRARY(greet STATIC Greetings.cpp)
 ADD_EXECUTABLE(test_greet test.cpp)
 TARGET_LINK_LIBRARIES(test_greet greet)
 
-IF (WIN32 AND "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-	TARGET_LINK_LIBRARIES(test_greet stdc++)
-ENDIF()
