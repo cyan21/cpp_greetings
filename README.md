@@ -15,7 +15,7 @@ cd cpp_greetings
 
 ```
 // create a build folder
-mkdir build
+mkdir build && cd build
 
 // Generate build files for compilation 
 cmake .. -G "Visual Studio 15 Win64"
@@ -59,10 +59,14 @@ git clone https://github.com/cyan21/cpp_greetings.git
 cd cpp_greetings && git checkout conan_deps
 ```
 
-2. Generate the files for your package and for your test, it will create the following files in the *test_package* :
+2. Generate the template files for your future package, it will create the following files in the *test_package* :
 - CMakeLists.txt
 - conanfile.py
 - example.cpp
+
+> the existing conanfile.py will be modified !  
+> use "git checkout -- conanfile.py" to restore it 
+
 
 ```
 conan new Greetings/0.1@yannc/dev -t
