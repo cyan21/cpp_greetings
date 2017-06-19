@@ -7,3 +7,4 @@
 #endif
 
 GREETINGS_EXPORT void en();
+GREETINGS_EXPORT void sp();

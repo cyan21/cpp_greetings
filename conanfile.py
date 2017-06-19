@@ -11,24 +11,41 @@ class GreetingsConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     generators = "cmake"
+    # reference sources in the current folder
+    # COMMENT OUT if you want to fetch source from GITHUB
+    exports_sources = "./*"
 
     def source(self):
-        self.run("git clone https://github.com/cyan21/cpp_greetings.git")
-        self.run("cd cpp_greetings && git checkout conan_deps")
+        # UNCOMMENT if you want to fetch source from GITHUB 
+#       self.run("git clone https://github.com/cyan21/cpp_greetings.git")
+#       self.run("cd cpp_greetings && git checkout conan_deps")
+
         # This small hack might be useful to guarantee proper /MT /MD linkage in MSVC
         # if the packaged project doesn't have variables to set it properly
-        tools.replace_in_file("cpp_greetings/CMakeLists.txt", "PROJECT(myGreetings)", '''PROJECT(myGreetings)
+        # UNCOMMENT if you want to fetch source from GITHUB 
+#       tools.replace_in_file("cpp_greetings/CMakeLists.txt", "PROJECT(myGreetings)", '''PROJECT(myGreetings)
+
+        # COMMENT OUT when using source from GITHUB
+        tools.replace_in_file("./CMakeLists.txt", "PROJECT(myGreetings)", '''PROJECT(myGreetings)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()''')
 
     def build(self):
         cmake = CMake(self)
         shared = "-DBUILD_SHARED_LIBS=ON" if self.options.shared else ""
-        self.run('cmake cpp_greetings %s %s' % (cmake.command_line, shared))
+        # UNCOMMENT if you want to fetch source from GITHUB 
+#        self.run('cmake cpp_greetings %s %s' % (cmake.command_line, shared))
+
+        # COMMENT OUT when using source from GITHUB
+        self.run('cmake . %s %s' % (cmake.command_line, shared))
         self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
-        self.copy("*.h", dst="include", src="cpp_greetings")
+        # UNCOMMENT if you want to fetch source from GITHUB 
+#        self.copy("*.h", dst="include", src="cpp_greetings")
+        self.copy("*.h", dst="include", src=".")
+
+        # see CMakeLists.txt to get the name of the lib ==> ADD_LIBRARY  
         self.copy("*greet.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
         self.copy("*.so", dst="lib", keep_path=False)

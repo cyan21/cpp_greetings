@@ -7,3 +7,8 @@ void en()
 {
 	cout << "Hello !" << endl;
 }
+
+void sp() 
+{
+	cout << "Hola !" << endl;
+}

@@ -1,6 +1,6 @@
 # For Conan demo
 
-simple C++ class
+simple C++ example 
 
 ## How to build
 
